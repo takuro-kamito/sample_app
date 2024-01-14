@@ -10,6 +10,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(list.id)
     else
+      @lits = List.all
       render :new
   end
 end 
